@@ -1,14 +1,23 @@
+require 'date'
+
 class Car
+
+  DEPRECIATION = 0.05
 
   attr_reader :make, :model, :year
 
 # has a make, model, and year of manufacture
-  def initialize(make, model, year, MSRP)
+  def initialize(make, model, year, msrp, markup = 0)
     @make = make
     @model = model
     @year = year
-    @MSRP = MSRP
+    @msrp = msrp
   end
+
+  def value
+
+  end
+
 
   # has an MSRP (original retail price)
   # has a value (MSRP modified by depreciation, taking the year of manufacture into account)
