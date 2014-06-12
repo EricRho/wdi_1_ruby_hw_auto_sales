@@ -3,13 +3,12 @@ class Car
   attr_reader :make, :model, :year
 
 # has a make, model, and year of manufacture
-  def initialize(make, model, year)
+  def initialize(make, model, year, MSRP)
     @make = make
     @model = model
     @year = year
+    @MSRP = MSRP
   end
-
-
 
   # has an MSRP (original retail price)
   # has a value (MSRP modified by depreciation, taking the year of manufacture into account)
