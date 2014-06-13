@@ -2,20 +2,29 @@ require 'date'
 
 class Car
 
-  DEPRECIATION = 0.05
+  DEPRECIATION = 0.95
 
-  attr_reader :make, :model, :year
+  attr_reader :make, :model, :year, :msrp
 
-# has a make, model, and year of manufacture
-  def initialize(make, model, year, msrp, markup = 0)
+  # has a make, model, and year of manufacture
+  def initialize(make, model, year, msrp)
     @make = make
     @model = model
     @year = year
     @msrp = msrp
+    #@value = current_value
   end
 
-  def value
+  def depreciate
+    price = msrp * DEPRECIATION
+  end
 
+
+  def current_value
+    lifespan = (Date.today.year) - year
+    lifespan.times do
+      current_value = msrp * DEPRECIATION
+    end
   end
 
 
