@@ -17,7 +17,7 @@ class UsedCar < Car
 
   # create method to add damage
   def include_damage(damage)
-    damages[damage.decription] = damage.cost
+    @damages[damage.description] = damage.cost
   end
 
   # create method to depreciate price of car from damage
@@ -34,8 +34,12 @@ class UsedCar < Car
     current_value * (1 - mileage * DEPR_PER_MILE)
   end
 
+  def total_depr
+    (msrp - current_value - depr_damage)
+  end
+
   def price
-    depreciated_value_mile * (1 + markup)
+    (depreciated_value_mile * (1 + markup)).round(2)
   end
 
 end

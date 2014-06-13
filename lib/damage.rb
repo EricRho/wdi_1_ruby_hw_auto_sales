@@ -2,7 +2,7 @@ class Damage
 
   attr_reader :description, :cost
 
-  def initialize(desciption, cost)
+  def initialize(description, cost)
     @description = description
     @cost = cost
   end
