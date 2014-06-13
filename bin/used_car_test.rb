@@ -1,9 +1,9 @@
 require_relative '../lib/used_car_class.rb'
 
-civic = Car.new("Honda", "Civic SI", 2007, 25_000, 0.3)
-mini = Car.new("Mini", "Cooper S", 2010, 26_000, 0.3)
+civic = UsedCar.new("Honda", "Civic SI", 2007, 25_000, 0.3, 100_000)
+#mini = UsedCar.new("Mini", "Cooper S", 2010, 26_000, 0.3, 100_000)
 
 
 
-puts "Used #{mini.year} #{mini.make} #{mini.model} with #{mileage} miles."
 
+puts "Used #{civic.year} #{civic.make} #{civic.model} with #{civic.mileage} miles."
