@@ -6,21 +6,29 @@ class Car
 
   attr_reader :make, :model, :year, :msrp
 
+  attr_accessor :value, :markup, :price
+
   # has a make, model, and year of manufacture
   def initialize(make, model, year, msrp)
     @make = make
     @model = model
     @year = year
     @msrp = msrp
+    #@value = value
+    @markup = markup
+    @price = price
     #@value = current_value
   end
 
+  # def depreciate
+  #   price = msrp * DEPRECIATION
+  # end
+  #fdef depreciated
+
+
   def current_value
-    lifespan = (Date.today.year) - year
-    lifespan.times do |depreciate|
-      depreciate = msrp * DEPRECIATION
-    end
-    depreciate
+    age = (Date.today.year) - year
+    msrp * DEPRECIATION ** age
   end
 
 
