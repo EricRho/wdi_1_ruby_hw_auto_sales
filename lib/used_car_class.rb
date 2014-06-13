@@ -4,11 +4,18 @@ class UsedCar < Car
 
   attr_accessor :mileage
 
-  DEPR_PER_MILE = .999999
+  DEPR_PER_MILE = 0.999999
 
-  def initialize(make, model, year, msrp)
-    super
+  def initialize(make, model, year, msrp, markup, mileage)
+    @mileage = mileage
+
+    super(make, model, year, msrp, markup)
   end
+
+  def depreciated_value
+    current_value * (DEPR_PER_MILE * mileage)
+  end
+
 end
 
 # has the same attributes as a new car
