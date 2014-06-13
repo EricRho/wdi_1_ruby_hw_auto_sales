@@ -22,9 +22,10 @@ class Car
 
   def current_value
     lifespan = (Date.today.year) - year
-    lifespan.times do
-      current_value = msrp * DEPRECIATION
+    lifespan.times do |depreciate|
+      depreciate = msrp * DEPRECIATION
     end
+    depreciate
   end
 
 
