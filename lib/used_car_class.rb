@@ -10,12 +10,23 @@ class UsedCar < Car
     @mileage = mileage
 
     super(make, model, year, msrp, markup)
+
     # add damages class variable somewhere around here?
+    damages = {}
   end
 
   # create method to add damage
+  def include_damage(damage)
+    damages[damage.decription] = damage.cost
+  end
 
   # create method to depreciate price of car from damage
+  def depr_damage
+    damage_cost = 0
+    damages.each do |damage, cost|
+      damage_cost += cost
+    end
+  end
 
   # insert previous method to depreicate price of car from damage into depreciated_value_mile
   def depreciated_value_mile
