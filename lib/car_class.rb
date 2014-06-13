@@ -15,11 +15,6 @@ class Car
     #@value = current_value
   end
 
-  def depreciate
-    price = msrp * DEPRECIATION
-  end
-
-
   def current_value
     lifespan = (Date.today.year) - year
     lifespan.times do |depreciate|
