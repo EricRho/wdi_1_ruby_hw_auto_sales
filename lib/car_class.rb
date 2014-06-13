@@ -20,7 +20,6 @@ class Car
     #@value = current_value
   end
 
-
   def current_value
     age = (Date.today.year) - year
     msrp * DEPRECIATION ** age
@@ -29,11 +28,4 @@ class Car
   def price
     (current_value * (markup + 1)).round(2)
   end
-
-  # has an MSRP (original retail price)
-  # has a value (MSRP modified by depreciation, taking the year of manufacture into account)
-  # all cars have a constant depreciation of 5% per year
-  # has a manager markup
-  # has a price (value modified by the manager markup)
-
 end
