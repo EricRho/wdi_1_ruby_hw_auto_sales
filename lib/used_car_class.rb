@@ -16,6 +16,10 @@ class UsedCar < Car
     current_value * (1 - mileage * DEPR_PER_MILE)
   end
 
+  def price
+    depreciated_value_mile * (1 + markup)
+  end
+
 end
 
 # has the same attributes as a new car
