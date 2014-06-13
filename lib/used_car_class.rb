@@ -2,6 +2,8 @@ require_relative 'car_class'
 
 class UsedCar < Car
 
+  def initialize(make, model, year, msrp)
+    super
 end
 
 # has the same attributes as a new car
