@@ -20,11 +20,6 @@ class Car
     #@value = current_value
   end
 
-  # def depreciate
-  #   price = msrp * DEPRECIATION
-  # end
-  #fdef depreciated
-
 
   def current_value
     age = (Date.today.year) - year
