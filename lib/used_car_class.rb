@@ -4,6 +4,7 @@ class UsedCar < Car
 
   def initialize(make, model, year, msrp)
     super
+  end
 end
 
 # has the same attributes as a new car
