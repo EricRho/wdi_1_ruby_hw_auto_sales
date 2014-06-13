@@ -9,7 +9,7 @@ class Car
   attr_accessor :value, :markup, :price
 
   # has a make, model, and year of manufacture
-  def initialize(make, model, year, msrp)
+  def initialize(make, model, year, msrp, markup)
     @make = make
     @model = model
     @year = year
@@ -26,6 +26,9 @@ class Car
     msrp * DEPRECIATION ** age
   end
 
+  def price
+    (current_value * (markup + 1)).round(2)
+  end
 
   # has an MSRP (original retail price)
   # has a value (MSRP modified by depreciation, taking the year of manufacture into account)
