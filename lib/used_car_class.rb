@@ -2,6 +2,8 @@ require_relative 'car_class'
 
 class UsedCar < Car
 
+  attr_accessor :mileage
+
   def initialize(make, model, year, msrp)
     super
   end
