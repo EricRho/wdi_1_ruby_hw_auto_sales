@@ -4,7 +4,7 @@ class UsedCar < Car
 
   attr_accessor :mileage
 
-  MILEAGE_DEPRECIATION = .999999
+  DEPR_PER_MILE = .999999
 
   def initialize(make, model, year, msrp)
     super
